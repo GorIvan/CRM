@@ -1,0 +1,114 @@
+.main-page{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: rgb(209, 217, 223);
+    display: flex;
+    *{
+        display: flex;
+        color: #000000;
+        
+    }
+    .header {
+        @include bg-color;
+        width: 100%;
+        margin-bottom: 40px;
+        height: 50px;
+        color: #daf6ff;
+    }
+    .secondary{
+        position: fixed;
+        right: 0;
+        width: 85%;
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .primary{
+        width: 15%;      //размер поставил пока примерно
+        height: 100vh;
+        position: fixed;
+        .primary-menu{
+            align-items: center;
+            width: 100%;
+            flex-direction: column;
+
+            .primary-header{
+                justify-content: space-between;
+                *{
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #daf6ff;
+                }
+                .clock-wrapper{
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                }
+                .order-counter{
+                    width: 30%;
+                    align-items: center;
+                    justify-content: center;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+
+            .primary-menu-container{
+                width: 100%;
+                height: 730px;
+                align-items: center;
+                flex-direction: column;
+                *{
+                    color: #daf6ff;
+                }
+                .main-buttons-container{
+                    @include scrollbar;
+                    width: 90%;
+                    margin-top: 24px;
+                    align-items: center;
+                    flex-direction: column;
+                    overflow: auto;
+                    padding-right: 10px;
+                    *{
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                    }
+                    .button-container {
+                        margin-bottom: 30px;
+                        .main-button{
+                            @include bg-color;
+                            width: 100%;
+                            height: 40px;
+                        }
+                        .submenu{
+                            .submenu-button {
+                                background: #2e5d7c;
+                                box-sizing: border-box;
+                                height: 40px;
+                                border: 1px solid #0f3854;
+                            }
+                        }      
+                    }  
+                }
+                
+            }
+            .primary-footer {
+                margin-top: auto;
+                width: 100%;
+                .footer-button {
+                    color: #daf6ff;
+                    @include bg-color;
+                    width: 100%;
+                    height: 50px;
+                }
+            }
+        }
+    }
+    .devider{
+        border: 1px solid #B1B1B1;
+        height: 100vh;
+    }
+}
